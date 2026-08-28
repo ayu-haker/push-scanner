@@ -11,7 +11,7 @@ func TestSecretScanner(t *testing.T) {
 	files := []TargetFile{
 		{
 			Path:               "src/config.js",
-			Content:            []byte(`const awsKey = "AKIA0000000000000000"; const ghToken = "ghp_000000000000000000000000000000000000";`),
+			Content:            []byte(`const awsKey = "AKIA0000000000000000"; const ghToken = "ghp_A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q7r8";`),
 			IsStagedForPublish: true,
 		},
 		{

@@ -1,15 +1,13 @@
 {
   "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "api/index.go",
-      "use": "@vercel/go"
-    }
-  ],
-  "routes": [
+      "source": "/api/scan",
+      "destination": "/api/scan.js"
+    },
     {
-      "src": "/(.*)",
-      "dest": "api/index.go"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
