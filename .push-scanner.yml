@@ -1,0 +1,12 @@
+# push-scanner configuration file
+mode: default # Policy mode: default, strict, permissive
+fail_on: HIGH # Block threshold: CRITICAL, HIGH, MEDIUM, LOW, INFO
+strict_ai: false # Set true to escalate AI-generated code signals to MEDIUM severity
+
+ignore_paths:
+  - "node_modules/**"
+  - ".git/**"
+  - "vendor/**"
+
+ignore_rules:
+  # - "PS-ART-004" # Example rule ignore

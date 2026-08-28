@@ -1,0 +1,29 @@
+name: 'push-scanner Pre-Publish Security Gate'
+description: 'Fast, single-binary security scanner preventing accidental publish of secrets, sourcemaps, and unverified AI code.'
+author: 'push-scanner'
+
+inputs:
+  path:
+    description: 'Path to target workspace directory'
+    required: false
+    default: '.'
+  mode:
+    description: 'Policy enforcement mode: default, strict, permissive'
+    required: false
+    default: 'default'
+  format:
+    description: 'Output format: console, json, sarif, github'
+    required: false
+    default: 'github'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '>=1.21'
+    - name: Run push-scanner
+      shell: bash
+      run: |
+        go run main.go scan --mode ${{ inputs.mode }} --format ${{ inputs.format }} ${{ inputs.path }}

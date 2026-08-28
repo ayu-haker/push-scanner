@@ -1,0 +1,22 @@
+# Binaries & Executables
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+push-scanner
+
+# Test Artifacts & Scratch
+scratch/
+*.test
+*.test.exe
+*.sarif
+*.cyclonedx.json
+*.slsa.json
+*.attestation.json
+
+# IDE & OS Metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
